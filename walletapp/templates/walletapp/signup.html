@@ -1,0 +1,414 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
+
+    <script>document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+    <title>Bluechipcrypto-exchange &#8211; Simple, Secure and Elite</title>
+    <script>window._wca = window._wca || [];</script>
+    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+        .user_card {
+            width: 350px;
+            margin-top: auto;
+            margin-bottom: auto;
+            background: #5D8233;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5px;
+
+        }
+
+        .form_container {
+            margin-top: 20px;
+        }
+
+        #form-title{
+            color: #fff;
+        }
+        .login_btn {
+            width: 100%;
+            background: #284E78!important;
+            color: white !important;
+        }
+        .login_btn:focus {
+            box-shadow: none !important;
+            outline: 0px !important;
+        }
+        .login_container {
+            padding: 0 2rem;
+        }
+        .input-group-text {
+            background: #f7ba5b !important;
+            color: white !important;
+            border: 0 !important;
+            border-radius: 0.25rem 0 0 0.25rem !important;
+        }
+        .input_user,
+        .input_pass:focus {
+            box-shadow: none !important;
+            outline: 0px !important;
+        }
+
+        .messages{
+            background-color: grey;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'  href="{% static 'epiruswallet.com/epirus2/wp-includes/css/dist/block-library/style.min9dff9dff.css' %}" type='text/css' media='all' />
+    <style id='wp-block-library-inline-css' type='text/css'>
+        .has-text-align-justify{text-align:justify;}
+    </style>
+    <link rel='stylesheet' id='wp-block-library-theme-css'  href="{% static 'epiruswallet.com/epirus2/wp-includes/css/dist/block-library/theme.min9dff9dff.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-style-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/stylee64ee64e.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='mpp_gutenberg-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build5f5a5f5a.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='ugb-style-css-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/front-gutenberg-blocks/dist/frontend_blocksce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='menu-image-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/menu-image/includes/css/menu-image76ed76ed.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/contact-form-7/includes/css/stylesb62db62d.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='select2-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/css/select22e462e46.css' %}" type='text/css' media='all' />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required { visibility: visible; }
+    </style>
+    <link rel='stylesheet' id='dashicons-css'  href="{% static 'epiruswallet.com/epirus2/wp-includes/css/dashicons.min9dff9dff.css' %}" type='text/css' media='all' />
+    <style id='dashicons-inline-css' type='text/css'>
+        [data-font="Dashicons"]:before {font-family: 'Dashicons' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+    </style>
+    <link rel='stylesheet' id='mas-wp-job-manager-company-reviews-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/mas-wp-job-manager-company-reviews/assets/css/mas-wp-job-manager-company-reviews9dff9dff.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-gateway-ppec-frontend-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce-gateway-paypal-express-checkout/assets/css/wc-gateway-ppec-frontend9dff9dff.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/css/prettyPhoto9dff9dff.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-selectBox-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox73597359.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='yith-wcwl-font-awesome-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/yith-woocommerce-wishlist/assets/css/font-awesome.min18491849.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-job-manager-applications-frontend-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/wp-job-manager-applications/assets/css/frontend9dff9dff.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='fontawesome-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/font-awesome/css/fontawesome-all.mince14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='animate-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/animate.css/animate.mince14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='megamenu-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/hs-megamenu/src/hs.megamenuce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-mCustomScrollbar-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbarce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-select-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/bootstrap-select/dist/css/bootstrap-select.mince14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-tagsinput-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/bootstrap-tagsinput/css/bootstrap-tagsinputce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-fancybox-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/fancybox/jquery.fancyboxce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='dzsparallaxer-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/dzsparallaxer/dzsparallaxerce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-carousel-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/slick-carousel/slick/slickce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='ion-rangeslider-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/ion-rangeslider/css/ion.rangeSliderce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='custombox-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/custombox/dist/custombox.mince14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='bg-video-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/hs-bg-video/hs-bg-videoce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='cubeportfolio-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/cubeportfolio/css/cubeportfolio.mince14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='chartist-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/chartist/dist/chartist.mince14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='chartist-tooltip-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/chartist-js-tooltip/chartist-plugin-tooltipce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='front-style-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/stylece14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='front-color-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/css/colors/bluece14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='front-woocommerce-style-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/css/woocommercece14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='front-wp-job-manager-style-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/css/wp-job-managerce14ce14.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='front-fonts-css'  href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' id='jetpack_css-css'  href="{% static 'epiruswallet.com/epirus2/wp-content/plugins/jetpack/css/jetpackf200f200.css' %}" type='text/css' media='all' />
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-includes/js/jquery/jquery4a5f4a5f.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-includes/js/jquery/jquery-migrate.min330a330a.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/front-gutenberg-blocks/dist/frontend_blocksce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/popper.js/dist/umd/popper.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/bootstrap/bootstrap.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/hs-megamenu/src/hs.megamenuce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/slick-carousel/slick/slickce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/svg-injector/dist/svg-injector.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/cubeportfolio/js/jquery.cubeportfolio.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/hs.corece14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.headerce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.unfoldce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.hamburgersce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.header-fullscreence14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.slick-carouselce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.svg-injectorce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.cubeportfolioce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.sticky-blockce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.go-toce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/appearce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.scroll-navce14ce14.js' %}"{></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/dzsparallaxer/dzsparallaxerce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/mas-wp-job-manager-company-reviews/assets/js/mas-wp-job-manager-company-reviews9dff9dff.js' %}"></script>
+    <script async type='text/javascript' src="{% static 'epiruswallet.com/epirus2/stats.wp.com/s-202018.html' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.quantity-counterce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.modal-windowce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/jquery-validation/dist/jquery.validate.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.validationce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/custombox/dist/custombox.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/custombox/dist/custombox.legacy.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.mince14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.malihu-scrollbarce14ce14.js' %}"></script>
+    <script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/components/hs.show-animationce14ce14.js' %}"></script>
+    <link rel='https://api.w.org/' href="{% static 'epiruswallet.com/epirus2/wp-json/index.html' %}" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% static 'epiruswallet.com/epirus2/wp-includes/wlwmanifest.xml' %}" />
+    <link rel="alternate" type="text/xml+oembed" href="epirus2/wp-json/oembed/1.0/embeddf41df41.html?url=https%3A%2F%2Fdemo2.madrasthemes.com%2Ffront-demos%2Fmain%2Flogin-signup%2F&amp;format=xml" />
+    <meta name="referrer" content="always"/><style type='text/css'>img#wpstats{display:none}</style>    <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+    <meta name='robots' content='noindex,follow' />
+
+    <!-- Jetpack Open Graph Tags -->
+ <link rel="icon" href="{% static 'walletapp_logo.png' %}" sizes="32x32" />
+    <link rel="icon" href="{% static 'walletapp_logo.png' %}" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'walletapp_logo.png' %}" />
+    <style type="text/css" id="wp-custom-css">
+        @media  screen and ( max-width: 390px ) {
+            .page-id-6 .hero-fancybox .fgb-button + .js-fancybox.ml-3 {
+                margin-top: 1rem;
+                margin-right: 1rem;
+                margin-left: 0 !important;
+            }
+        }
+
+        .shop-classic-clients .u-clients {
+            max-width: unset;
+        }
+
+        .page-id-6 .news-blog-section .u-slick__pagination:not(.u-slick__pagination--block) {display: flex !important;}
+
+        .page-template-template-login.woocommerce-page .u-header--bg-transparent {
+            background-color: unset;
+        }
+
+        .page-template-template-login.woocommerce-page .u-header--abs-top+#content {
+            padding-top: 0 !important;
+        }       </style>
+    <script>
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+            var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+                return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+                if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+                setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+                var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+            if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+            else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+    </script></head>
+<body class="page-template page-template-template-login page-template-template-login-php page page-id-6382 wp-embed-responsive theme-front woocommerce-account woocommerce-page woocommerce-no-js mas-wpjmc-activated front-align-wide wpjm-activated front" >
+
+
+<div id="page" class="hfeed site">
+
+
+    <header id="header" class="u-header u-header--full-container u-header--abs-top u-header--bg-transparent" >
+        <!-- Search -->
+
+        <!-- End Search -->
+        <div class="u-header__section" >
+            <div id="logoAndNav" class="container-fluid">
+                <nav class="navbar navbar-expand u-header__navbar" data-dropdown-trigger="hover">
+                    <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white" href="{% url 'home' %}"><!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+                        <span class="u-header__navbar-brand-text">Bluechipcrypto-exchange</span></a>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main id="content" role="main">
+
+
+        <div class="d-flex align-items-center position-relative height-lg-100vh">
+            <div class="col-lg-5 col-xl-4 d-none d-lg-flex align-items-center gradient-half-primary-v1 height-lg-100vh px-0">
+                <div class="w-100 p-5">
+
+                    <div id="post-6382" class=" article__page post-6382 page type-page status-publish hentry">
+                        <div class="article__content article__content--page">
+                            <div class="testimonial-carousel-jetpack login-template"><div class="testimonial-carousel style-5 " style=""><figure class="text-center mb-5 mx-auto"><img class="js-svg-injector" src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/svg/illustrations/quote1.svg' %}" alt="SVG"/></figure><div id="testimonialsNavMainExample1" class="js-slick-carousel u-slick mb-4" data-infinite="false" data-autoplay="true" data-speed="5000" data-fade="true" data-nav-for="#testimonialsNavPaginationExample1"><div class="js-slide"><div class="w-md-80 w-lg-60 text-center mx-auto"><blockquote class="h5 text-white font-weight-normal mb-4">You obviously do not need any prior knowledge on cryptocurrency to start using Bluechipcrypto-exchange. They put you through everything!</blockquote><h4 class="h6 text-white-70">Alex Pottorf, Paldof Trade Academy</h4></div></div>
+                                        <div class="js-slide"><div class="w-md-80 w-lg-60 text-center mx-auto"><blockquote class="h5 text-white font-weight-normal mb-4">I started using Bluechipcrypto-exchange 2 years ago and it has been nothing but awesome for me!</blockquote><h4 class="h6 text-white-70">Raznov Jun, Pascals Inc.</h4></div></div>
+                                        <div class="js-slide"><div class="w-md-80 w-lg-60 text-center mx-auto"><blockquote class="h5 text-white font-weight-normal mb-4">Its been great so far, a friend introduced me to Bluechipcrypto-exchange and I thank her for that.</blockquote><h4 class="h6 text-white-70">Charlotte Moore, Director Business Planning, Oasis</h4></div></div>
+                                        <div class="js-slide"><div class="w-md-80 w-lg-60 text-center mx-auto"><blockquote class="h5 text-white font-weight-normal mb-4">Nothing feels better than shopping online with my Bluechipcrypto-exchange card, soo seamless!</blockquote><h4 class="h6 text-white-70">James Austin, Metro Savers Corp.</h4></div></div>
+                                    </div><div id="testimonialsNavPaginationExample1" class="js-slick-carousel u-slick u-slick--transform-off u-slick--pagination-modern mx-auto" data-infinite="false" data-autoplay="true" data-speed="5000" data-center-mode="true" data-slides-show="3" data-is-thumbs="true" data-focus-on-select="true" data-nav-for="#testimonialsNavMainExample1"><div class="js-slide"><div class="u-avatar mx-auto"><img class="img-fluid rounded-circle" src="{% static 'epiruswallet.com/epirus2/wp-content/uploads/sites/2/2019/09/Testimonial3.jpg' %}" alt="Alex Pottorf"></div></div><div class="js-slide"><div class="u-avatar mx-auto"><img class="img-fluid rounded-circle" src="{% static 'epiruswallet.com/epirus2/wp-content/uploads/sites/2/2019/09/Testimonial1.jpg' %}" alt="Raznov Jun"></div></div><div class="js-slide"><div class="u-avatar mx-auto"><img class="img-fluid rounded-circle" src="{% static 'epiruswallet.com/epirus2/wp-content/uploads/sites/2/2019/09/Testimonial5.jpg' %}" alt="Charlotte Moore"></div></div><div class="js-slide"><div class="u-avatar mx-auto"><img class="img-fluid rounded-circle" src="{% static 'epiruswallet.com/epirus2/wp-content/uploads/sites/2/2019/09/Testimonial6.jpg' %}" alt="James Austin"></div></div></div></div></div>
+
+
+
+                        </div><!-- .entry-content -->
+                    </div><!-- #post-## -->
+                </div>
+            </div>
+            <div class="container">
+                <div class="woocommerce"><div class="row no-gutters">
+                        <div class="col-md-8 col-lg-7 col-xl-6 offset-md-2 offset-lg-2 offset-xl-3 space-3 space-lg-0" id="customer_login">
+
+                            <div class="woocommerce-notices-wrapper"></div>
+
+                            <div class="tab-content mt-5">
+
+                                <div class="tab-pane active" id="customer-register-form" aria-labelledby="register-tab">
+                                    <div class="mb-7">
+                                        <h2 class="h3 text-primary font-weight-normal mb-0">Welcome to <span class="font-weight-semi-bold">Bluechipcrypto-exchange</span></h2>
+                                        <p>Fill out the form to create your wallet.</p>
+                                    </div>
+      <form method="POST" action="">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {{field.errors}}
+                        {% endfor %}
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+                            </div>
+                            {{form.email}}
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            {{form.password1}}
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            {{form.password2}}
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <input class="btn login_btn" type="submit" value="Register Account">
+                        </div>
+                    </form>
+
+                </div>
+
+
+                {% for message in messages %}
+
+                    <p class="messages">{{message}}</p>
+
+                {% endfor %}
+
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                        Already have an account? <a href="{% url 'signin' %}" class="ml-2">Login</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+                        /* Because i didnt set placeholder values in forms.py they will be set here using vanilla Javascript
+        //We start indexing at one because CSRF_token is considered and input field
+         */
+
+        //Query All input fields
+        var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='Email..';
+        form_fields[2].placeholder='Enter password...';
+        form_fields[3].placeholder='Re-enter Password...';
+
+
+        for (var field in form_fields){
+            form_fields[field].className += ' form-control'
+        }
+    </script>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>        </div>
+        </div>
+
+    </main><!-- #content -->
+
+
+
+
+</div><!-- #page -->
+
+<script type="text/javascript">
+    var c = document.body.className;
+    c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+    document.body.className = c;
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min73597359.js' %}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var yith_wcwl_l10n = {"ajax_url":"\/front-demos\/main\/wp-admin\/admin-ajax.php","redirect_to_cart":"no","multi_wishlist":"","hide_add_button":"1","enable_ajax_loading":"","ajax_loader_url":"https:\/\/demo2.madrasthemes.com\/front-demos\/main\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg","remove_from_wishlist_after_add_to_cart":"1","labels":{"cookie_disabled":"We are sorry, but this feature is available only if cookies on your browser are enabled.","added_to_cart_message":"<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"},"actions":{"add_to_wishlist_action":"add_to_wishlist","remove_from_wishlist_action":"remove_from_wishlist","reload_wishlist_and_adding_elem_action":"reload_wishlist_and_adding_elem","load_mobile_action":"load_mobile","delete_item_action":"delete_item","load_fragments":"load_fragments"}};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl7c457c45.js' %}"></script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/metronet-profile-picture/js/mpp-frontend5f5a5f5a.js' %}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wpcf7 = {"apiSettings":{"root":"https:\/\/demo2.madrasthemes.com\/front-demos\/main\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/contact-form-7/includes/js/scriptsb62db62d.js' %}"></script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd44fd.js' %}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wc_add_to_cart_params = {"ajax_url":"\/front-demos\/main\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/front-demos\/main\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/demo2.madrasthemes.com\/front-demos\/main\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min2e462e46.js' %}"></script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min0ba60ba6.js' %}"></script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b256b25.js' %}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var woocommerce_params = {"ajax_url":"\/front-demos\/main\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/front-demos\/main\/?wc-ajax=%%endpoint%%"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min2e462e46.js' %}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wc_cart_fragments_params = {"ajax_url":"\/front-demos\/main\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/front-demos\/main\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_eb06b2322fb5b4cae3af61dcd023f0b0","fragment_name":"wc_fragments_eb06b2322fb5b4cae3af61dcd023f0b0","request_timeout":"5000"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min2e462e46.js'%}"></script>
+<script type='text/javascript'>
+    jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+        jQuery( 'body' ).trigger( 'jetpack-lazy-images-load' );
+    } );
+
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min005e005e.js'%}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var mailchimp_public_data = {"site_url":"https:\/\/demo2.madrasthemes.com\/front-demos\/main","ajax_url":"https:\/\/demo2.madrasthemes.com\/front-demos\/main\/wp-admin\/admin-ajax.php"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min95b895b8.js' %}"></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var front_options = {"rtl":"0","ajax_url":"https:\/\/demo2.madrasthemes.com\/front-demos\/main\/wp-admin\/admin-ajax.php","ajax_loader_url":"https:\/\/demo2.madrasthemes.com\/front-demos\/main\/wp-content\/themes\/front\/assets\/svg\/preloaders\/circle-preloader.svg","wp_job_manager_submission":{"i18n_confirm_remove":"Are you sure you want to remove this item?"},"hide_max_list_items_args":{"max":5,"speed":500,"moreText":"View more","lessText":"View less","moreHTML":"<p class=\"maxlist-more\"><a class=\"link\" href=\"#\"><\/a><\/p>"}};
+    /* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-content/themes/front/assets/js/frontce14ce14.js' %}"></script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/wp-includes/js/wp-embed.min9dff9dff.js' %}"></script>
+<script type='text/javascript' src="{% static 'epiruswallet.com/epirus2/stats.wp.com/e-202018.html' %}" async='async' defer='defer'></script>
+<script type='text/javascript'>
+    _stq = window._stq || [];
+    _stq.push([ 'view', {v:'ext',j:'1:8.2.3',blog:'162040044',post:'6382',tz:'0',srv:'demo2.madrasthemes.com'} ]);
+    _stq.push([ 'clickTrackerInit', '162040044', '6382' ]);
+</script>
+<!-- ========== END SECONDARY CONTENTS ========== -->            <a class="js-go-to u-go-to" href="#" data-position='{"bottom": 15, "right": 15 }' data-type="fixed" data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp"
+                                                                    data-hide-effect="slideOutDown">
+    <span class="fas fa-arrow-up u-go-to__inner"></span>
+</a>
+
+</body>
+
+</html>

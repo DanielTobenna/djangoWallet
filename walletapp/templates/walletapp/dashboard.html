@@ -1,0 +1,491 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bluechipcrypto-exchange &#8211; Simple, Secure and Elite </title>
+    <!-- Favicon icon -->
+    <link rel="icon" href="{% static 'walletapp_logo.png' %}" sizes="32x32" />
+    <link rel="icon" href="{% static 'walletapp_logo.png' %}" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'walletapp_logo.png' %}" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{% static 'epiruswallet.com/epirus3/waves.min.css' %}">
+    <link rel="stylesheet" href="{% static 'epiruswallet.com/epirus3/toastr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'epiruswallet.com/epirus3/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'epiruswallet.com/epirus3/style.css' %}">
+</head>
+
+
+<body class="dashboard">
+
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+
+<div id="main-wrapper">
+
+    <div class="header dashboard">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <nav class="navbar navbar-expand-lg navbar-light px-0">
+                        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'M-LOGO.png' %}" alt="">BlueChip</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'dashboard' %}">Wallet</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Auto bot <span class="badge badge-success">New</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'account_settings' %}">Settings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'swap' %}">Exchange</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'moreswap' %}">More Swap</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'tokenswap' %}">Swap tokens</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dashboard_log my-2">
+                            <div class="d-flex align-items-center">
+                                <div class="account_money">
+                                    <ul>
+                                        <li class="crypto">
+
+                                            <span style="color: #62A388 !important;">{{total_balance}}</span>
+
+                                            <i class="cc BTC-alt"></i>
+                                        </li>
+                                        <li class="usd">
+                                            <span> USD</span>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="profile_log dropdown">
+                                    <div class="user" data-toggle="dropdown">
+                                        <span class="name">{{request.user.username}}</span>
+                                        <span class="arrow"><i class="la la-angle-down"></i></span>
+                                    </div>
+                                    <div style="background-color: #62A388 !important;" class="dropdown-menu dropdown-menu-right">
+                                        <a href="{% url 'dashboard' %}" class="dropdown-item">
+                                            <i class="la la-credit-card"></i> Wallet
+                                        </a>
+                                        <a href="{% url 'account_settings' %}" class="dropdown-item">
+                                            <i class="la la-cog"></i> Settings
+                                        </a>
+                                        <a href="{% url 'logout' %}" class="dropdown-item logout">
+                                            <i class="la la-sign-out"></i> Logout
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page_title section-padding">
+        <div class="container">
+        </div>
+    </div>
+
+        <div class="homepage mb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="card balance-widget">
+                        <div class="card-header pb-0 border-0">
+                            <h4 class="card-title">Your Portfolio</h4>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="balance-widget">
+                                <div class="total-balance">
+                                    <h3>{{total_balance}} USD</h3>
+                                    <h6>Total Balance</h6>
+                                </div>
+                                <div style="text-align: center;">
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="media">
+                                        <i class="cc BTC mr-3"></i>
+
+                                        <img src="{% static 'epiruswallet.com/images/bitcoin.jpg' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Bitcoin </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{btc_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_bitcoin}} BTC</h5>
+                                            <span>{{customerbtc}} USD</span>
+
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/eth.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Ethereum </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{ethereum_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_eth}} ETH</h5>
+                                            <span>{{customereth}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/doge.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Dogecoin </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{my_doge_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_doge}} DOGE</h5>
+                                            <span>{{customerdodge}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/trx.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Tron </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{tron_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_trx}} TRX</h5>
+                                            <span>{{customertrx}} USD</span>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/xlm.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Steller Lumens </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{stellar_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_xlm}} XLM</h5>
+                                            <span>{{customerxlm}} USD</span>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/ada.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Cardano </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{cardano_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_ada}} ADA</h5>
+                                            <span>{{customerada}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/dot.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Polkadot </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{polkadot_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_dot}} DOT</h5>
+                                            <span>{{customerdot}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/sol.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Solana</h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{solana_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_sol}} SOL</h5>
+                                            <span>{{customersol}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/ltc.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Litecoin </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{litecoin_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_ltc}} LTC</h5>
+                                            <span>{{customerltc}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/usdt.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Tether</h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{usd_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_Usdt}} USDT</h5>
+                                            <h5>{{customerUsdt}} USD</h5>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'tersonimages/element.jpg' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">ELEMENT</h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{element_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_element}} ELM</h5>
+                                            <h5>{{updated_customer_element}} USD</h5>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'tersonimages/polygon.jpg' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">POLYGON</h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{polygon_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_polygon}} PYN</h5>
+                                            <h5>{{updated_customer_polygon}} USD</h5>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'tersonimages/randon.jpg' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">RANDON</h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{radon_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_radon}} RDN</h5>
+                                            <h5>{{updated_customer_randon}} USD</h5>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/axieinfinity.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Axie Infinity </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{ax_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_axs}} AXS</h5>
+                                            <span>{{customeraxs}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/floki.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Floki </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{flok_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_floki}} FLOKI</h5>
+                                            <span>{{customerfloki}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/binanceusd.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Binance USD </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{bus_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_busd}} BUSD</h5>
+                                            <span>{{customerbusd}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/dash.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">DASH </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{das_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_dash}} DASH</h5>
+                                            <span>{{customerdash}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/etc.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Ethereum Classic </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{et_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_etc}} ETC</h5>
+                                            <span>{{customeretc}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/monero.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Monero</h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{xm_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_xmr}} XMR</h5>
+                                            <span>{{customerxmr}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/bch.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Bitcoin Cash </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{bc_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_bch}} BCH</h5>
+                                            <span>{{customerbch}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/shib.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Shiba inu </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{shibainu_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_shib}} SHIB</h5>
+                                            <span>{{customershib}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/bnb.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Binance Coin </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{bnb_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_bnb}} BNB</h5>
+                                            <span>{{customerbnbbsc}} USD</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'tersonimages/Tetim.jpg' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">TETIM</h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{tetim_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_tetim}} TTM</h5>
+                                            <h5>{{updated_customer_tetim}} USD</h5>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <img src="{% static 'epiruswallet.com/images/xrp.png' %}" class="mr-3" style="height: 30px;">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Ripple </h5>
+                                            <span style="color: #62A388 !important;"><small>USD {{xr_price}}</small></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <h5>{{customer_xrp}} XRP</h5>
+                                            <span>{{customerxrp}} USD</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="btn-group col-sm-12 mt-3 p-sm-0">
+                                <a href="{% url 'withdraw' %}" class="btn btn-primary">Withdraw</a>
+                                <a href="{% url 'recieve' %}" class="btn btn-success">Deposit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="col-xl-8 col-lg-8">
+                    <div class="card profile_chart">
+                        <div style="height:460px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; padding:1px;padding: 0px; margin: 0px; width: 100%;">
+                            <div style="height:440px; padding:0px; margin:0px; width: 100%;">
+                                <iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-md-6">
+                    <div class="copy_right">
+                        Copyright © 2016 Bluechipcrypto-exchange. All Rights Reserved.
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 text-lg-right text-center">
+                   <div id="google_translate_element"></div>
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                                }
+                            </script>
+                            <script type="text/javascript" src="{% static 'translate.google.com/translate_a/element.js' %}"></script></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="{% static 'epiruswallet.com/epirus3/jquery.min.js' %}"></script>
+<script src="{% static 'epiruswallet.com/epirus3/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'epiruswallet.com/epirus3/waves.min.js' %}"></script>
+
+<script src="{% static 'epiruswallet.com/epirus3/toastr.min.js' %}"></script>
+
+
+<script src="{% static 'epiruswallet.com/epirus3/circle-progress.min.js' %}"></script>
+<script src="{% static 'epiruswallet.com/epirus3/circle-progress-init.js' %}"></script>
+
+
+<!--  flot-chart js -->
+<script src="{% static 'epiruswallet.com/epirus3/apexcharts.min.js' %}"></script>
+<script src="{% static 'epiruswallet.com/epirus3/apexchart-init.js' %}"></script>
+
+
+<!-- <script src="./js/dashboard.js"></script> -->
+<script src="{% static 'epiruswallet.com/epirus3/scripts.js' %}"></script>
+
+</body>
+
+</html>

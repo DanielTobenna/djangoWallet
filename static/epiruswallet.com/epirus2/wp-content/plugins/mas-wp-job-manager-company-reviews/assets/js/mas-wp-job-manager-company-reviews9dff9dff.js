@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$('.choose-rating').on('click','.star',function(event){$(this).nextAll('.star').removeClass('active');$(this).prevAll('.star').removeClass('active');$(this).addClass('active');$(this).parent().find('input').attr('value',$(this).attr('data-star-rating'));});});
